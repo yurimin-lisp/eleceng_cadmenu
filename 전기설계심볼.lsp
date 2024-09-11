@@ -2,23 +2,23 @@
 ;-----------------------------------------------------------------------------
 ;A3SC 
 ;SYMSC
-;TXTH ÅØ½ºÆ® ³ôÀÌ
-;TX ÅØ½ºÆ®³»¿ë
-;SM ½Éº¼ÀÌ¸§
+;TXTH í…ìŠ¤íŠ¸ ë†’ì´
+;TX í…ìŠ¤íŠ¸ë‚´ìš©
+;SM ì‹¬ë³¼ì´ë¦„
 ;---------------------------------------------------------------------------
 
 ;;--------------------------------------------------------
-;;»ç¿ëÀÚ ¼³Á¤ºÎ
-(setq drawlay "GK-SYM") ;; »ğÀÔµÉ ·¹ÀÌ¾î ¼³Á¤
-(setq symlaycol 3) ;; ·¹ÀÌ¾î »ö»ó
+;;ì‚¬ìš©ì ì„¤ì •ë¶€
+(setq drawlay "SYM") ;; ì‚½ì…ë  ë ˆì´ì–´ ì„¤ì •
+(setq symlaycol 2) ;; ë ˆì´ì–´ ìƒ‰ìƒ
 ;;---------------------------------------------------------
 
 (defun cuistartup ( / CMDE)
-   (setq A3SC (getvar "USERI5")) ;;µµ¸é ½ºÄÉÀÏ
-   (setq SYMSC 1.0) ;;½Éº¼½ºÄÉÀÏ
-   (setq TXTH 1.0) ;;ÅØ½ºÆ® ³ôÀÌ
-   (setq TX "TXT") ;;ÀÔ·Â¹®ÀÚ¿­
-   (setq SM "SYM") ;;½Éº¼ÀÌ¸§
+   (setq A3SC (getvar "USERI5")) ;;ë„ë©´ ìŠ¤ì¼€ì¼
+   (setq SYMSC 1.0) ;;ì‹¬ë³¼ìŠ¤ì¼€ì¼
+   (setq TXTH 1.0) ;;í…ìŠ¤íŠ¸ ë†’ì´
+   (setq TX "TXT") ;;ì…ë ¥ë¬¸ìì—´
+   (setq SM "SYM") ;;ì‹¬ë³¼ì´ë¦„
    
    (if (= A3SC 0)
       (progn
@@ -124,7 +124,7 @@
    (princ SYMSC)
    (princ ", TEXT HEIGHT : ")
    (princ TXTH)
-   (princ "\n ¸¸¾à À§ ÃàÀû°ªÀÌ Æ²·ÈÀ»°æ¿ì 'DRAWSCALE'¸í·É È¤Àº ¸Ş´ºÀÇ ½ºÄÉÀÏÁ¶Àı ¸í·ÉÀ» »ç¿ëÇÏ½Ã¿À")
+   (princ "\n ë§Œì•½ ìœ„ ì¶•ì ê°’ì´ í‹€ë ¸ì„ê²½ìš° 'DRAWSCALE'ëª…ë ¹ í˜¹ì€ ë©”ë‰´ì˜ ìŠ¤ì¼€ì¼ì¡°ì ˆ ëª…ë ¹ì„ ì‚¬ìš©í•˜ì‹œì˜¤")
    (princ " ")
 
 )
@@ -149,10 +149,10 @@
 
 
 ;-----------------------------------------------------------------------------
-;;¸Ş´º¹öÆ° ´­·¶À»¶§ ½Éº¼ ³Ö±â
-;;SM º¯¼ö·Î À¸·Î ½Éº¼¸í °¡Á®¿À±â
+;;ë©”ë‰´ë²„íŠ¼ ëˆŒë €ì„ë•Œ ì‹¬ë³¼ ë„£ê¸°
+;;SM ë³€ìˆ˜ë¡œ ìœ¼ë¡œ ì‹¬ë³¼ëª… ê°€ì ¸ì˜¤ê¸°
 
-;;½ºÄÉÀÏ µû¶ó¼­
+;;ìŠ¤ì¼€ì¼ ë”°ë¼ì„œ
 (defun c:SYMINPUT1 (/ CLA POINT1 POINT2 ANG OSN)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -178,7 +178,7 @@
    (SETVAR "OSMODE" OSN)
 )
 
-;;½ºÄÉÀÏ1
+;;ìŠ¤ì¼€ì¼1
 (defun c:SYMINPUT2 (/ CLA POINT1 POINT2 ANG OSN)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -203,7 +203,7 @@
 )
 
 
-;;°¢µµÁöÁ¤¾øÀÌ ³Ö±â
+;;ê°ë„ì§€ì •ì—†ì´ ë„£ê¸°
 (defun c:SYMINPUT3 (/ CLA POINT1 OSN)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -223,7 +223,7 @@
    (SETVAR "OSMODE" OSN)
 )
 
-;;°¢µµ 180 ³Ö±â
+;;ê°ë„ 180 ë„£ê¸°
 (defun c:SYMINPUT4 (/ CLA POINT1 OSN)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -245,7 +245,7 @@
 
 
 
-;;¸ğÅÍ¿ë
+;;ëª¨í„°ìš©
 (defun c:SYMINPUT5 (/ CLA POINT1 POINT2 ANG OSN)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -272,8 +272,8 @@
    (SETVAR "OSMODE" OSN)
 )
 
-;;¼± Áß°£¿¡ ÅØ½ºÆ® ³Ö±â
-;;ÅØ½ºÆ®³»¿ëÀº TX º¯¼ö°ª
+;;ì„  ì¤‘ê°„ì— í…ìŠ¤íŠ¸ ë„£ê¸°
+;;í…ìŠ¤íŠ¸ë‚´ìš©ì€ TX ë³€ìˆ˜ê°’
 (defun c:LINETEXT (/ CMDE WHI POINT P1 P2 OBJ OBJX COD LST LST_temp CLA CCE OSN CST ANG)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -393,7 +393,7 @@
    ;;(command "rectangle" P1 P2)
 
    (command "break" OBJ P1 P2)
-   (command "style" "¸¼Àº°íµñ" "malgun.ttf" "0" "1" "0" "N" "N" )
+   (command "style" "ë§‘ì€ê³ ë”•" "malgun.ttf" "0" "1" "0" "N" "N" )
    (command "TEXT" "J" "MC" POINT TXTH 0 TX)
 
    (setvar "CLAYER" CLA)
@@ -427,12 +427,12 @@
    (command "-INSERT" SM POINT1 TXTH TXTH 0)
    (setq l_point (list (- (car POINT1) (* TXTH 0.7) ) (- (cadr POINT1) (* TXTH 0.5))))
    (setq r_point (list (+ (car POINT1) (* TXTH 0.7) ) (- (cadr POINT1) (* TXTH 0.5))))
-   (command "style" "¸¼Àº°íµñ" "malgun.ttf" "0" "1" "0" "N" "N" )
+   (command "style" "ë§‘ì€ê³ ë”•" "malgun.ttf" "0" "1" "0" "N" "N" )
    (command "CECOLOR" 7)
   
    (IF (= (STRLEN TXT) 1)
-      (command "_.text" "s" "¸¼Àº°íµñ" "j" "MC" point1 TXTH 0 TXT)
-      (command "_.text" "s" "¸¼Àº°íµñ" "j" "f" l_point r_point TXTH TXT)
+      (command "_.text" "s" "ë§‘ì€ê³ ë”•" "j" "MC" point1 TXTH 0 TXT)
+      (command "_.text" "s" "ë§‘ì€ê³ ë”•" "j" "f" l_point r_point TXTH TXT)
    )
    
   
@@ -445,14 +445,14 @@
 
 
 
-(DEFUN c:UNRP () ;;µµ¸é´ÜÀ§ÀçÁöÁ¤
+(DEFUN c:UNRP () ;;ë„ë©´ë‹¨ìœ„ì¬ì§€ì •
    (command "-units" 2 4 1 4 0 "n")
    (command "-dwgunits" 3 2 4 "y" "y" "n")
 )
 
 
 
-;;Á¾´ÜÀúÇ× Ç¥±â
+;;ì¢…ë‹¨ì €í•­ í‘œê¸°
 (DEFUN C:FRESIS (/ N P CLA CCE OSN I OUTTXT)
    (if (or (null A3SC) (null SYMSC) (null TXTH))
       (cuistartup)
@@ -465,19 +465,19 @@
    (SETQ I 0)
    (WHILE (< I N)
       (IF (= I 0)
-         (SETQ OUTTXT "¥Ø")
-         (SETQ OUTTXT (strcat OUTTXT "¥Ø"))
+         (SETQ OUTTXT "Î©")
+         (SETQ OUTTXT (strcat OUTTXT "Î©"))
       )
       (SETQ I (+ I 1))   
    )
-   (command "style" "¸¼Àº°íµñ" "malgun.ttf" "0" "1" "0" "N" "N" )
+   (command "style" "ë§‘ì€ê³ ë”•" "malgun.ttf" "0" "1" "0" "N" "N" )
 
    (if (tblsearch "layer" drawlay)
       (princ)
       (command "LAYER" "M" drawlay "C" symlaycol drawlay "")
    )
    (setvar "CLAYER" drawlay)
-   (command "_.text" "s" "¸¼Àº°íµñ" "j" "ML" P (/ TXTH 2) 0 OUTTXT)
+   (command "_.text" "s" "ë§‘ì€ê³ ë”•" "j" "ML" P (/ TXTH 2) 0 OUTTXT)
 
    (setvar "CLAYER" CLA)
    (command "CECOLOR" CCE)
