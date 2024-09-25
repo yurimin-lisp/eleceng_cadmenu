@@ -650,9 +650,9 @@
         <Macro type="Any">
           <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
           <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="1" />
-          <Name xlate="true">형광등</Name>
+          <Name xlate="true">벽부등</Name>
           <Command>^C^C(SETQ SM "LSYM_WALL");SYMINPUT1</Command>
-          <HelpString xlate="true" UID="XLS_0697">형광등</HelpString>
+          <HelpString xlate="true" UID="XLS_0697">벽부등</HelpString>
           <SmallImage Name="LSYM_WALL.bmp" />
           <LargeImage Name="LSYM_WALL.bmp" />
         </Macro>
@@ -1878,6 +1878,17 @@
           <LargeImage Name="LINE_E.bmp" />
         </Macro>
       </MenuMacro>
+      <MenuMacro UID="LINE_DC">
+        <Macro type="Any">
+          <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
+          <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="1" />
+          <Name xlate="true">DC [DC]</Name>
+          <Command>^C^C(SETQ TX "DC");LINETEXT</Command>
+          <HelpString xlate="true" UID="XLS_0791">DC [DC]</HelpString>
+          <SmallImage Name="LINE_DC.bmp" />
+          <LargeImage Name="LINE_DC.bmp" />
+        </Macro>
+      </MenuMacro>
       <MenuMacro UID="LINE_F">
         <Macro type="Any">
           <Revision MajorVersion="16" MinorVersion="2" UserVersion="1" />
@@ -2677,7 +2688,7 @@
           </PopMenuItem>
           <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMIU_0058">
             <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="1" />
-            <NameRef UID="XLS_0331" xlate="true">형광등</NameRef>
+            <NameRef UID="XLS_0331" xlate="true">벽부등</NameRef>
             <MenuItem>
               <MacroRef MenuMacroID="LSYM_WALL" />
             </MenuItem>
@@ -3609,6 +3620,13 @@
               <MacroRef MenuMacroID="LINE_S" />
             </MenuItem>
           </PopMenuItem>
+          <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMIU_0175">
+            <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="1" />
+            <NameRef UID="XLS_0792" xlate="true">DC [DC]</NameRef>
+            <MenuItem>
+              <MacroRef MenuMacroID="LINE_DC" />
+            </MenuItem>
+          </PopMenuItem>
         </PopMenu>
       </PopMenuRoot>
       <ToolbarRoot>
@@ -4056,7 +4074,7 @@
           </ToolbarButton>
           <ToolbarButton IsSeparator="false" UID="TBBU_0058">
             <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="1" />
-            <Name xlate="true" UID="XLS_0340">형광등</Name>
+            <Name xlate="true" UID="XLS_0340">벽부등</Name>
             <MenuItem>
               <MacroRef MenuMacroID="LSYM_WALL" />
             </MenuItem>
@@ -5006,6 +5024,13 @@
             <Name xlate="true" UID="XLS_0566">방송 [S]</Name>
             <MenuItem>
               <MacroRef MenuMacroID="LINE_S" />
+            </MenuItem>
+          </ToolbarButton>
+          <ToolbarButton IsSeparator="false" UID="TBBU_0188">
+            <ModifiedRev MajorVersion="17" MinorVersion="0" UserVersion="1" />
+            <Name xlate="true" UID="XLS_0793">DC [DC]</Name>
+            <MenuItem>
+              <MacroRef MenuMacroID="LINE_DC" />
             </MenuItem>
           </ToolbarButton>
         </Toolbar>
